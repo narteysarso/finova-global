@@ -16,8 +16,6 @@ const Solutions: React.FC = () => {
         return <Building2 className="w-10 h-10 text-primary-500" />;
       case 'Building':
         return <Building className="w-10 h-10 text-primary-500" />;
-      case 'Network':
-        return <Network className="w-10 h-10 text-primary-500" />;
       default:
         return null;
     }
@@ -43,7 +41,7 @@ const Solutions: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {solutions.categories.map((category, index) => (
             <Card 
               key={index}
