@@ -28,7 +28,7 @@ function App() {
         <AboutUs />
         <Solutions />
         <Products />
-        <Industries />
+        {/* <Industries /> */}
         <Resources />
         <Contact />
       </main>

@@ -81,14 +81,14 @@ export const content = {
         ],
         icon: "Building"
       },
-      {
-        title: "Distributed Technologies",
-        items: [
-          "AI-powered Insights",
-          "APIs for Payment & Identity Systems"
-        ],
-        icon: "Network"
-      }
+      // {
+      //   title: "Distributed Technologies",
+      //   items: [
+      //     "AI-powered Insights",
+      //     "APIs for Payment & Identity Systems"
+      //   ],
+      //   icon: "Network"
+      // }
     ]
   },
   industries: {
