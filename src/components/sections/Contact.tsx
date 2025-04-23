@@ -1,46 +1,48 @@
-import React, { useState } from 'react';
-import { content } from '../../constants/content';
-import Button from '../ui/Button';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useInView } from '../hooks/useInView';
+import React, { useState } from "react";
+import { content } from "../../constants/content";
+import Button from "../ui/Button";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useInView } from "../hooks/useInView";
 
 const Contact: React.FC = () => {
   const { contact } = content;
   const [ref, isInView] = useInView({ threshold: 0.1, triggerOnce: true });
-  
+
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setErrorMessage('');
+    setErrorMessage("");
 
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitSuccess(true);
-      
+
       // Reset form after success
       setTimeout(() => {
         setFormData({
-          name: '',
-          email: '',
-          company: '',
-          message: ''
+          name: "",
+          email: "",
+          company: "",
+          message: "",
         });
         setSubmitSuccess(false);
       }, 3000);
@@ -51,31 +53,36 @@ const Contact: React.FC = () => {
     <section id="contact" className="section bg-neutral-50" ref={ref}>
       <div className="container">
         <div className="text-center mb-16">
-          <h2 
+          <h2
             className={`section-title transition-all duration-700 ${
-              isInView ? 'opacity-100' : 'opacity-0 transform translate-y-8'
+              isInView ? "opacity-100" : "opacity-0 transform translate-y-8"
             }`}
           >
             {contact.title}
           </h2>
-          <p 
+          <p
             className={`section-subtitle mx-auto transition-all duration-700 delay-200 ${
-              isInView ? 'opacity-100' : 'opacity-0 transform translate-y-8'
+              isInView ? "opacity-100" : "opacity-0 transform translate-y-8"
             }`}
           >
-            {contact.message} Let's explore how we can help you achieve your digital goals.
+            {contact.message} Let's explore how we can help you achieve your
+            digital goals.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          <div 
+        <div className="flex justify-center items-center">
+          <div
             className={`transition-all duration-700 ${
-              isInView ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform -translate-x-20'
+              isInView
+                ? "opacity-100 transform translate-x-0"
+                : "opacity-0 transform -translate-x-20"
             }`}
           >
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold mb-6 text-secondary-600">Get in Touch</h3>
-              
+              <h3 className="text-2xl font-bold mb-6 text-secondary-600">
+                Get in Touch
+              </h3>
+
               <div className="space-y-6 mb-8">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary-100 rounded-full">
@@ -83,15 +90,15 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Email</h4>
-                    <a 
-                      href={`mailto:${contact.details.email}`} 
+                    <a
+                      href={`mailto:${contact.details.email}`}
                       className="text-primary-600 hover:underline"
                     >
                       {contact.details.email}
                     </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-accent-100 rounded-full">
                     <Phone className="w-6 h-6 text-accent-600" />
@@ -101,7 +108,7 @@ const Contact: React.FC = () => {
                     <p>{contact.details.phone}</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary-100 rounded-full">
                     <MapPin className="w-6 h-6 text-secondary-600" />
@@ -112,22 +119,26 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex gap-4">
                 {contact.buttons.map((button, index) => (
-                  <Button 
-                    key={index}
-                    href={button.link}
-                    variant={button.variant as 'primary' | 'outline' || 'primary'}
-                  >
-                    {button.text}
-                  </Button>
+                  // <a href={button.link} >
+                    <Button
+                      key={index}
+                      href={button.link}
+                      variant={
+                        (button.variant as "primary" | "outline") || "primary"
+                      }
+                    >
+                      {button.text}
+                    </Button>
+                  // </a>
                 ))}
               </div>
             </div>
           </div>
 
-          <div 
+          {/* <div 
             id="contact-form"
             className={`transition-all duration-700 ${
               isInView ? 'opacity-100 transform translate-x-0' : 'opacity-0 transform translate-x-20'
@@ -202,7 +213,7 @@ const Contact: React.FC = () => {
                 </form>
               )}
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

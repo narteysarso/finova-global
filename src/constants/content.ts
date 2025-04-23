@@ -81,14 +81,6 @@ export const content = {
         ],
         icon: "Building"
       },
-      {
-        title: "Distributed Technologies",
-        items: [
-          "AI-powered Insights",
-          "APIs for Payment & Identity Systems"
-        ],
-        icon: "Network"
-      }
     ]
   },
   industries: {
@@ -149,12 +141,12 @@ export const content = {
     message: "We'd love to hear from you.",
     details: {
       email: "hello@finovaglobal.com",
-      phone: "+233 xxx xxx xxx",
+      phone: "+233 572 575 885",
       location: "Accra, Ghana"
     },
     buttons: [
-      { text: "Send a Message", link: "#contact-form" },
-      { text: "Schedule a Call", link: "#schedule", variant: "outline" }
+      { text: "Schedule a meeting", link: "#contact-form" },
+      { text: "Schedule a Call", link: "tel:+233572575885", variant: "outline" }
     ],
     formFields: [
       { name: "name", label: "Full Name", type: "text", placeholder: "Your Name" },
