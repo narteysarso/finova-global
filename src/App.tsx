@@ -10,6 +10,7 @@ import Industries from './components/sections/Industries';
 import Resources from './components/sections/Resources';
 import Contact from './components/sections/Contact';
 import './styles/globals.css';
+import Products from './components/sections/Products';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
         <WhatWeOffer />
         <AboutUs />
         <Solutions />
+        <Products />
         <Industries />
         <Resources />
         <Contact />
