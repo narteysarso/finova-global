@@ -25,7 +25,6 @@ export const content = {
         "Digital Wallets & Payment Tools",
         "SME Business & E-commerce Solutions",
         "Enterprise Tech Consulting & Custom Systems",
-        "Blockchain & AI Infrastructure for Digital Commerce"
       ],
       buttons: [
         { text: "Learn More", link: "#about" },
@@ -59,8 +58,8 @@ export const content = {
       {
         title: "For Individuals",
         items: [
-          "Secure Digital Wallets",
-          "Personal Budgeting & Finance Tools"
+          "Personal Budgeting & Finance Tools",
+          "custom solutions"
         ],
         icon: "Wallet"
       },
@@ -85,7 +84,6 @@ export const content = {
       {
         title: "Distributed Technologies",
         items: [
-          "Blockchain-enabled Infrastructure",
           "AI-powered Insights",
           "APIs for Payment & Identity Systems"
         ],
