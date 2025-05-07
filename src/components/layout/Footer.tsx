@@ -1,6 +1,7 @@
 import React from 'react';
 import { content } from '../../constants/content';
 import { Facebook, Linkedin, Twitter, Zap } from 'lucide-react';
+import amlctf from '../../assets/documents/AML_CTF_Policy.pdf';
 
 const Footer: React.FC = () => {
   const { footer } = content;
@@ -73,7 +74,7 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-secondary-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-neutral-400 text-sm mb-4 md:mb-0">{footer.copyright}</p>
-          <div className="flex space-x-6">
+          <div className="flex space-x-6 items-center">
             {footer.links.map((link, index) => (
               <a 
                 key={index}
@@ -83,6 +84,13 @@ const Footer: React.FC = () => {
                 {link.text}
               </a>
             ))}
+            <a
+              target='_blank' 
+              href={amlctf} 
+              className="text-neutral-400 hover:text-accent-500 transition-colors text-sm"
+            >
+              AML/CTF policy
+            </a>
           </div>
         </div>
       </div>
