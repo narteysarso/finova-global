@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
               Empowering digital transformation for individuals, SMEs, and organizations 
               through innovative and distributed technologies.
             </p>
-            <div className="flex space-x-4">
+            {/* <div className="flex space-x-4">
               {footer.socialMedia.map((social, index) => (
                 <a 
                   key={index}
@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
                   {getIcon(social.icon)}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
           
           <div>
@@ -55,6 +55,7 @@ const Footer: React.FC = () => {
               <li><a href="#about" className="text-neutral-300 hover:text-accent-500 transition-colors">About</a></li>
               <li><a href="#solutions" className="text-neutral-300 hover:text-accent-500 transition-colors">Solutions</a></li>
               <li><a href="#industries" className="text-neutral-300 hover:text-accent-500 transition-colors">Industries</a></li>
+              <li><a href={amlctf} className="text-neutral-300 hover:text-accent-500 transition-colors">AML/CTF policy</a></li>
             </ul>
           </div>
           

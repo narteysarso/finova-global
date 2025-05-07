@@ -140,13 +140,13 @@ export const content = {
     title: "Contact Us",
     message: "We'd love to hear from you.",
     details: {
-      email: "hello@finovaglobal.com",
-      phone: "+233 572 575 885",
-      location: "Accra, Ghana"
+      email: "info@finovaglobal.org",
+      phone: "+233 556 724 993",
+      location: "Kumasi, Ghana"
     },
     buttons: [
       { text: "Schedule a meeting", link: "#contact-form" },
-      { text: "Schedule a Call", link: "tel:+233572575885", variant: "outline" }
+      { text: "Schedule a Call", link: "tel:+233556724993", variant: "outline" }
     ],
     formFields: [
       { name: "name", label: "Full Name", type: "text", placeholder: "Your Name" },
